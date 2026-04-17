@@ -12,8 +12,8 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #1e90ff 0, #0b5ed7 40%, #052c65 100%);
-      color: #ffffff;
+      background: #e6f0ff;
+      color: #0f2a4d;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -29,44 +29,51 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 24px;
-      background: rgba(5, 44, 101, 0.95);
-      border-bottom: 1px solid #ffffff33;
-      backdrop-filter: blur(10px);
+      padding: 10px 24px;
+      background: #ffffff;
+      border-bottom: 1px solid #d0ddf5;
       position: sticky;
       top: 0;
       z-index: 10;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
 
     .logo {
       display: flex;
       align-items: center;
       cursor: pointer;
+      gap: 10px;
     }
 
-    .logo-icon {
-      width: 40px;
-      height: 40px;
+    .logo-img {
+      width: 44px;
+      height: 44px;
       border-radius: 12px;
-      background: linear-gradient(135deg, #ffffff, #e0e7ff);
-      color: #052c65;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      margin-right: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      object-fit: cover;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
 
-    .logo-text {
-      font-size: 22px;
+    .logo-text-block {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-title {
+      font-size: 20px;
       font-weight: 700;
+      color: #123765;
       letter-spacing: 0.5px;
+    }
+
+    .logo-subtitle {
+      font-size: 11px;
+      color: #6c7a96;
     }
 
     .header-right {
       font-size: 13px;
-      opacity: 0.9;
+      color: #4a5a78;
     }
 
     .app-container {
@@ -77,43 +84,47 @@
 
     .side-menu {
       width: 230px;
-      background: rgba(5, 44, 101, 0.96);
-      border-right: 1px solid #ffffff33;
-      padding: 20px 12px;
+      background: #f4f7ff;
+      border-right: 1px solid #d0ddf5;
+      padding: 18px 12px;
       display: none;
       flex-shrink: 0;
-      backdrop-filter: blur(10px);
     }
 
     .menu-title {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: #e0e7ff;
+      color: #6c7a96;
     }
 
     .menu-item {
-      padding: 10px 12px;
+      padding: 9px 12px;
       margin-bottom: 8px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #0b5ed7, #0a58ca);
-      color: #ffffff;
+      border-radius: 10px;
+      background: #ffffff;
+      color: #123765;
       font-size: 14px;
       cursor: pointer;
-      transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
     }
 
     .menu-item:hover {
-      background: linear-gradient(135deg, #0a58ca, #084298);
+      background: #e4edff;
       transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
     }
 
     .menu-item.danger {
-      background: linear-gradient(135deg, #dc3545, #b02a37);
+      background: #ffe8ea;
+      color: #b02a37;
+    }
+
+    .menu-item.danger:hover {
+      background: #ffd4d8;
     }
 
     .main-content {
@@ -123,11 +134,11 @@
     }
 
     .card {
-      background: rgba(255,255,255,0.98);
-      color: #0b5ed7;
-      border-radius: 16px;
-      padding: 24px 24px 28px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      background: #ffffff;
+      color: #123765;
+      border-radius: 18px;
+      padding: 22px 24px 26px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
       max-width: 1100px;
       margin: 0 auto;
       position: relative;
@@ -139,41 +150,41 @@
       position: absolute;
       top: -80px;
       right: -80px;
-      width: 180px;
-      height: 180px;
-      background: radial-gradient(circle, #0b5ed7 0, transparent 60%);
-      opacity: 0.15;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, #cfe0ff 0, transparent 60%);
+      opacity: 0.7;
     }
 
     .card h1, .card h2, .card h3 {
-      color: #052c65;
-      margin-bottom: 10px;
+      color: #123765;
+      margin-bottom: 8px;
     }
 
     .card p {
-      margin-bottom: 10px;
-      color: #1b1f3b;
+      margin-bottom: 8px;
+      color: #3b4b6a;
     }
 
     .intro-subtitle {
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: #6c757d;
+      color: #8a96b0;
       margin-bottom: 4px;
     }
 
     .highlight {
-      color: #0b5ed7;
+      color: #1f6feb;
       font-weight: 700;
     }
 
     .pill {
       display: inline-block;
-      padding: 3px 8px;
+      padding: 3px 9px;
       border-radius: 999px;
-      background: #e7f1ff;
-      color: #084298;
+      background: #e4edff;
+      color: #1f4f8f;
       font-size: 11px;
       font-weight: 600;
       margin-right: 6px;
@@ -188,7 +199,7 @@
     .form-row label {
       font-size: 13px;
       margin-bottom: 4px;
-      color: #052c65;
+      color: #123765;
       font-weight: 600;
     }
 
@@ -196,18 +207,20 @@
     .form-row select,
     .form-row textarea {
       padding: 8px 10px;
-      border-radius: 8px;
-      border: 1px solid #ced4da;
+      border-radius: 10px;
+      border: 1px solid #c4d2f0;
       font-size: 14px;
-      transition: border 0.2s, box-shadow 0.2s;
+      transition: border 0.15s, box-shadow 0.15s, background 0.15s;
+      background: #f9fbff;
     }
 
     .form-row input:focus,
     .form-row select:focus,
     .form-row textarea:focus {
       outline: none;
-      border-color: #0b5ed7;
-      box-shadow: 0 0 0 2px rgba(11,94,215,0.25);
+      border-color: #1f6feb;
+      box-shadow: 0 0 0 2px rgba(31,111,235,0.2);
+      background: #ffffff;
     }
 
     .btn-row {
@@ -229,26 +242,26 @@
       justify-content: center;
       gap: 6px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #0b5ed7, #0a58ca);
+      background: linear-gradient(135deg, #1f6feb, #1b5fd1);
       color: #ffffff;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
 
     .btn-primary:hover {
-      background: linear-gradient(135deg, #0a58ca, #084298);
+      background: linear-gradient(135deg, #1b5fd1, #174ea6);
     }
 
     .btn-secondary {
-      background: #e9ecef;
-      color: #052c65;
+      background: #eef2ff;
+      color: #123765;
     }
 
     .btn-secondary:hover {
-      background: #dde2e6;
+      background: #dde5ff;
     }
 
     .btn-danger {
@@ -271,7 +284,7 @@
 
     .link {
       font-size: 13px;
-      color: #0b5ed7;
+      color: #1f6feb;
       cursor: pointer;
       text-decoration: underline;
     }
@@ -283,7 +296,7 @@
     }
 
     .info {
-      color: #0b5ed7;
+      color: #1f6feb;
       font-size: 13px;
       margin-top: 4px;
     }
@@ -312,25 +325,25 @@
       border-collapse: collapse;
       margin-top: 10px;
       font-size: 13px;
-      background: #f8f9fa;
+      background: #f9fbff;
       border-radius: 10px;
       overflow: hidden;
     }
 
     th, td {
-      border: 1px solid #dee2e6;
+      border: 1px solid #d6e0f5;
       padding: 8px;
       text-align: left;
     }
 
     th {
-      background: #e9ecef;
-      color: #052c65;
+      background: #e4edff;
+      color: #123765;
       font-weight: 600;
     }
 
     tr:nth-child(even) {
-      background: #fdfdff;
+      background: #ffffff;
     }
 
     .podium {
@@ -344,29 +357,29 @@
     .podium-tier {
       width: 130px;
       text-align: center;
-      color: #052c65;
+      color: #123765;
     }
 
     .podium-box {
       border-radius: 10px 10px 0 0;
       padding: 10px;
-      background: #e9ecef;
+      background: #e4edff;
       position: relative;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
     }
 
     .podium-box.gold {
-      background: linear-gradient(135deg, #ffd700, #ffec8b);
+      background: linear-gradient(135deg, #ffe58f, #ffd666);
       height: 130px;
     }
 
     .podium-box.silver {
-      background: linear-gradient(135deg, #c0c0c0, #f5f5f5);
+      background: linear-gradient(135deg, #f0f0f0, #d9d9d9);
       height: 100px;
     }
 
     .podium-box.bronze {
-      background: linear-gradient(135deg, #cd7f32, #f4a460);
+      background: linear-gradient(135deg, #f4b183, #e69138);
       height: 80px;
     }
 
@@ -376,7 +389,7 @@
       border-radius: 999px;
       font-size: 11px;
       font-weight: 700;
-      background: #052c65;
+      background: #123765;
       color: #ffffff;
       margin-top: 6px;
     }
@@ -386,12 +399,12 @@
     }
 
     .chat-box {
-      border: 1px solid #ced4da;
+      border: 1px solid #c4d2f0;
       border-radius: 10px;
       padding: 10px;
       max-height: 200px;
       overflow-y: auto;
-      background: #f8f9fa;
+      background: #f9fbff;
       font-size: 13px;
     }
 
@@ -401,13 +414,13 @@
 
     .chat-message span {
       font-weight: 700;
-      color: #052c65;
+      color: #123765;
     }
 
     .rating-stars span {
       cursor: pointer;
       font-size: 18px;
-      color: #ced4da;
+      color: #c4d2f0;
     }
 
     .rating-stars span.active {
@@ -419,8 +432,8 @@
       padding: 2px 6px;
       border-radius: 999px;
       font-size: 11px;
-      background: #e7f1ff;
-      color: #084298;
+      background: #e4edff;
+      color: #1f4f8f;
       margin-left: 4px;
     }
 
@@ -432,7 +445,7 @@
         width: 100%;
         display: none;
         border-right: none;
-        border-bottom: 1px solid #ffffff33;
+        border-bottom: 1px solid #d0ddf5;
       }
     }
   </style>
@@ -440,8 +453,11 @@
 <body>
   <header>
     <div class="logo" id="logoHome">
-      <div class="logo-icon">SS</div>
-      <div class="logo-text">Study Swap</div>
+      <img src="studyswap-logo.jpeg" alt="Study Swap Logo" class="logo-img">
+      <div class="logo-text-block">
+        <div class="logo-title">Study Swap</div>
+        <div class="logo-subtitle">Sessions · Files · Leaderboard</div>
+      </div>
     </div>
     <div class="header-right" id="headerUserInfo">
       Not signed in
@@ -533,35 +549,28 @@
         </div>
       </section>
 
-      <!-- FORGOT PASSWORD -->
+      <!-- FORGOT PASSWORD (name + gmail + new password) -->
       <section class="card hidden" id="forgotCard">
         <h2>Forgot Password</h2>
-        <p>Enter the Gmail you used when signing up. We will simulate sending a reset code.</p>
+        <p>Enter your <strong>name</strong> and <strong>Gmail</strong>. If they match a stored user, you can set a new password.</p>
+        <div class="form-row">
+          <label for="fpName">Student Name</label>
+          <input id="fpName" type="text" />
+        </div>
         <div class="form-row">
           <label for="fpEmail">Gmail</label>
           <input id="fpEmail" type="email" />
         </div>
+        <div class="form-row">
+          <label for="fpNewPassword">New Password</label>
+          <input id="fpNewPassword" type="password" />
+        </div>
         <div class="btn-row">
-          <button class="btn btn-primary" id="sendCodeBtn">Send Code</button>
+          <button class="btn btn-primary" id="resetPasswordDirectBtn">Change Password</button>
           <button class="btn btn-secondary" id="cancelForgotBtn">Cancel</button>
         </div>
         <div class="info" id="fpInfo"></div>
         <div class="error" id="fpError"></div>
-
-        <div class="mt-20 hidden" id="codeSection">
-          <div class="form-row">
-            <label for="fpCode">Enter Code</label>
-            <input id="fpCode" type="text" />
-          </div>
-          <div class="form-row">
-            <label for="fpNewPassword">New Password</label>
-            <input id="fpNewPassword" type="password" />
-          </div>
-          <div class="btn-row">
-            <button class="btn btn-success" id="resetPasswordBtn">Reset Password</button>
-          </div>
-          <div class="error" id="fpCodeError"></div>
-        </div>
       </section>
 
       <!-- HOME -->
@@ -752,6 +761,19 @@
           </table>
         </div>
       </section>
+
+      <!-- USER PROFILE VIEW -->
+      <section class="card hidden" id="profileCard">
+        <h2>User Profile</h2>
+        <p><strong>Name:</strong> <span id="profileName"></span></p>
+        <p><strong>Gmail:</strong> <span id="profileEmail"></span></p>
+        <p><strong>Grade:</strong> <span id="profileGrade"></span></p>
+        <p><strong>Curriculum:</strong> <span id="profileCurriculum"></span></p>
+        <p><strong>Points:</strong> <span id="profilePoints"></span></p>
+        <div class="btn-row mt-10">
+          <button class="btn btn-secondary" id="closeProfileBtn">Close</button>
+        </div>
+      </section>
     </main>
   </div>
 
@@ -761,6 +783,7 @@
      ****************************************************/
     const HOST_EMAIL = 'Remas1806@gmail.com';        // CHANGE THIS
     const HOST_PASSWORD = 'REMASHOST';    // CHANGE THIS
+    const CURRENT_USER_KEY = 'studyswap_current_user_id';
 
     const STORAGE_KEYS = {
       USERS: 'studyswap_users',
@@ -769,8 +792,6 @@
     };
 
     let currentUser = null;
-    let currentResetCode = null;
-    let currentResetEmail = null;
     let currentChatSessionId = null;
 
     function loadData(key) {
@@ -803,6 +824,7 @@
     const leaderboardPage = document.getElementById('leaderboardPage');
     const filesPage = document.getElementById('filesPage');
     const hostPage = document.getElementById('hostPage');
+    const profileCard = document.getElementById('profileCard');
     const sideMenu = document.getElementById('sideMenu');
     const hostMenuItem = document.getElementById('hostMenuItem');
     const headerUserInfo = document.getElementById('headerUserInfo');
@@ -814,21 +836,25 @@
     const siError = document.getElementById('siError');
 
     const forgotPasswordLink = document.getElementById('forgotPasswordLink');
-    const sendCodeBtn = document.getElementById('sendCodeBtn');
+    const resetPasswordDirectBtn = document.getElementById('resetPasswordDirectBtn');
     const cancelForgotBtn = document.getElementById('cancelForgotBtn');
     const fpInfo = document.getElementById('fpInfo');
     const fpError = document.getElementById('fpError');
-    const codeSection = document.getElementById('codeSection');
-    const resetPasswordBtn = document.getElementById('resetPasswordBtn');
-    const fpCodeError = document.getElementById('fpCodeError');
 
     const logoHome = document.getElementById('logoHome');
     const logoutBtn = document.getElementById('logoutBtn');
     const welcomeText = document.getElementById('welcomeText');
     const currentCurriculumSpan = document.getElementById('currentCurriculum');
 
+    const profileName = document.getElementById('profileName');
+    const profileEmail = document.getElementById('profileEmail');
+    const profileGrade = document.getElementById('profileGrade');
+    const profileCurriculum = document.getElementById('profileCurriculum');
+    const profilePoints = document.getElementById('profilePoints');
+    const closeProfileBtn = document.getElementById('closeProfileBtn');
+
     function showOnly(section) {
-      [introCard, forgotCard, homePage, bookPage, leaderboardPage, filesPage, hostPage].forEach(s => {
+      [introCard, forgotCard, homePage, bookPage, leaderboardPage, filesPage, hostPage, profileCard].forEach(s => {
         s.classList.add('hidden');
       });
       if (section) section.classList.remove('hidden');
@@ -849,6 +875,9 @@
     function loginUser(user) {
       currentUser = user;
       currentUser.isHost = isHostUser(user);
+
+      localStorage.setItem(CURRENT_USER_KEY, currentUser.id);
+
       sideMenu.style.display = 'block';
       hostMenuItem.style.display = currentUser.isHost ? 'block' : 'none';
       updateHomePage();
@@ -859,6 +888,7 @@
 
     function logoutUser() {
       currentUser = null;
+      localStorage.removeItem(CURRENT_USER_KEY);
       sideMenu.style.display = 'none';
       headerUserInfo.textContent = 'Not signed in';
       showOnly(introCard);
@@ -943,79 +973,44 @@
       showOnly(forgotCard);
       fpInfo.textContent = '';
       fpError.textContent = '';
-      codeSection.classList.add('hidden');
-      currentResetCode = null;
-      currentResetEmail = null;
     });
 
     cancelForgotBtn.addEventListener('click', () => {
       showOnly(introCard);
     });
 
-    sendCodeBtn.addEventListener('click', () => {
+    resetPasswordDirectBtn.addEventListener('click', () => {
+      const name = document.getElementById('fpName').value.trim().toLowerCase();
       const email = document.getElementById('fpEmail').value.trim().toLowerCase();
+      const newPassword = document.getElementById('fpNewPassword').value;
+
       fpInfo.textContent = '';
       fpError.textContent = '';
-      codeSection.classList.add('hidden');
 
-      if (!email) {
-        fpError.textContent = 'Please enter your Gmail.';
+      if (!name || !email || !newPassword) {
+        fpError.textContent = 'Please fill in all fields.';
         return;
       }
 
       const users = getUsers();
-      const user = users.find(u => u.email === email);
+      const user = users.find(u =>
+        u.email === email && u.name.toLowerCase() === name
+      );
+
       if (!user) {
-        fpError.textContent = 'No user found with this Gmail.';
-        return;
-      }
-
-      currentResetCode = Math.floor(100000 + Math.random() * 900000).toString();
-      currentResetEmail = email;
-
-      fpInfo.textContent =
-        `Simulated: A reset code has been "sent" to ${email}. (For demo, your code is ${currentResetCode})`;
-      codeSection.classList.remove('hidden');
-    });
-
-    resetPasswordBtn.addEventListener('click', () => {
-      const code = document.getElementById('fpCode').value.trim();
-      const newPassword = document.getElementById('fpNewPassword').value;
-      fpCodeError.textContent = '';
-
-      if (!code || !newPassword) {
-        fpCodeError.textContent = 'Please enter the code and a new password.';
-        return;
-      }
-
-      if (!currentResetCode || !currentResetEmail) {
-        fpCodeError.textContent = 'No reset request in progress.';
-        return;
-      }
-
-      if (code !== currentResetCode) {
-        fpCodeError.textContent = 'Invalid code.';
-        return;
-      }
-
-      const users = getUsers();
-      const user = users.find(u => u.email === currentResetEmail);
-      if (!user) {
-        fpCodeError.textContent = 'User not found.';
+        fpError.textContent = 'No user found with this name and Gmail combination.';
         return;
       }
 
       if (users.some(u => u.password === newPassword && u.id !== user.id)) {
-        fpCodeError.textContent = 'This password is already used by another user. Choose a different one.';
+        fpError.textContent = 'This password is already used by another user. Choose a different one.';
         return;
       }
 
       user.password = newPassword;
       saveUsers(users);
 
-      fpInfo.textContent = 'Password reset successful. You can now sign in.';
-      currentResetCode = null;
-      currentResetEmail = null;
+      fpInfo.textContent = 'Password changed successfully. You can now sign in.';
     });
 
     logoHome.addEventListener('click', () => {
@@ -1079,7 +1074,12 @@
           <td>${availability}</td>
           <td>${u.points || 0}</td>
           <td>
-            ${session ? `<button class="btn btn-primary btn-sm" data-session-id="${session.id}">Book</button>` : ''}
+            ${session ? `
+              <button class="btn btn-primary btn-sm" data-session-id="${session.id}">Book</button>
+              <button class="btn btn-secondary btn-sm" data-profile-id="${u.id}">Profile</button>
+            ` : `
+              <button class="btn btn-secondary btn-sm" data-profile-id="${u.id}">Profile</button>
+            `}
           </td>
         `;
         hostsTableBody.appendChild(tr);
@@ -1089,6 +1089,13 @@
         btn.addEventListener('click', () => {
           const sessionId = btn.getAttribute('data-session-id');
           bookSession(sessionId);
+        });
+      });
+
+      hostsTableBody.querySelectorAll('button[data-profile-id]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const userId = btn.getAttribute('data-profile-id');
+          openUserProfile(userId);
         });
       });
 
@@ -1110,7 +1117,7 @@
             <button class="btn btn-success btn-sm" data-action="accept" data-session-id="${session.id}" data-request-id="${request.id}">Accept</button>
             <button class="btn btn-danger btn-sm" data-action="decline" data-session-id="${session.id}" data-request-id="${request.id}">Decline</button>
             <button class="btn btn-secondary btn-sm" data-action="reschedule" data-session-id="${session.id}" data-request-id="${request.id}">Reschedule</button>
-            <button class="btn btn-primary btn-sm" data-action="meet" data-session-id="${session.id}">Create Meet Link</button>
+            <button class="btn btn-primary btn-sm" data-action="meet" data-session-id="${session.id}">Send Meet Link</button>
           </td>
         `;
         requestsTableBody.appendChild(tr);
@@ -1525,6 +1532,24 @@
       refreshAllViews();
     }
 
+    function openUserProfile(userId) {
+      const users = getUsers();
+      const u = users.find(x => x.id === userId);
+      if (!u) return;
+
+      profileName.textContent = u.name;
+      profileEmail.textContent = u.email;
+      profileGrade.textContent = u.grade;
+      profileCurriculum.textContent = u.curriculum;
+      profilePoints.textContent = u.points || 0;
+
+      showOnly(profileCard);
+    }
+
+    closeProfileBtn.addEventListener('click', () => {
+      showOnly(homePage);
+    });
+
     function refreshAllViews() {
       refreshBookPage();
       refreshLeaderboard();
@@ -1532,7 +1557,20 @@
       if (currentUser && currentUser.isHost) refreshHostPage();
     }
 
-    showOnly(introCard);
+    (function init() {
+      const users = getUsers();
+      const savedId = localStorage.getItem(CURRENT_USER_KEY);
+      if (savedId) {
+        const u = users.find(x => x.id === savedId);
+        if (u) {
+          loginUser(u);
+          return;
+        } else {
+          localStorage.removeItem(CURRENT_USER_KEY);
+        }
+      }
+      showOnly(introCard);
+    })();
   </script>
 </body>
 </html>
